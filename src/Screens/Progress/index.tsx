@@ -194,7 +194,38 @@ const Progress = () => {
           if (selectedStep == 0) {
             setSelectedStep(selectedStep + 1);
           }
-        
+          if (selectedStep==4){
+            // progress1.setValue(0);
+            Animated.timing(progress1, {
+                toValue: 0,
+                duration: 3000,
+                delay:6000,
+                useNativeDriver: false,
+              }).start();
+              Animated.timing(progress2, {
+                toValue: 0,
+                duration: 3000,
+                delay:3000,
+                useNativeDriver: false,
+              }).start();
+              Animated.timing(progress3, {
+                toValue: 0,
+                duration: 3000,
+                useNativeDriver: false,
+              }).start();
+            // progress2.setValue(0);
+            // progress3.setValue(0);
+              setTimeout(() => {
+              setSelectedStep(3);
+            }, 100);
+            setTimeout(() => {
+                setSelectedStep(2);
+              }, 3100);
+              setTimeout(() => {
+                setSelectedStep(1);
+              }, 6100);
+            // setSelectedStep(1);
+          }
           
           else {
             setTimeout(() => {
