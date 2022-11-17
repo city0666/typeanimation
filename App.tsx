@@ -6,23 +6,29 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Typeanimation from './src/Screens/Typeanimation';
 import Progress from './src/Screens/Progress';
 import ScrollTest from './src/Screens/ScrollTest';
+import safeConspect from './src/Screens/safeConspect'
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      {/* <Stack.Screen name="safeConspect" component={safeConspect}
+                options={{headerShown: false}}
+
+      /> */}
+
         <Stack.Screen name="ScrollTest" component={ScrollTest} />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Progress"
           component={Progress}
           //options={{headerShown: false}}
-        />
-        <Stack.Screen
+        /> */}
+        {/* <Stack.Screen
           name="Typeanimation"
           component={Typeanimation}
           options={{headerShown: false}}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
